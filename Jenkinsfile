@@ -16,4 +16,13 @@ node{
     ''', cc: '', from: '', replyTo: '', subject: 'job jenkins', to: 'seiftouhemi@gmail.com'
   
   }
+  
+  stage('Slack Notification'){
+  
+    slackSend baseUrl: 'https://hooks.slack.com/services/',
+    channel: '#jenkins-pipeline',
+    message: 'welcome from jenkins',
+    tokenCredentialId: 'slack-demo',
+    username: 'test'
+  }
 }
