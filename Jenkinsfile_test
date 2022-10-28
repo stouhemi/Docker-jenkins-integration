@@ -19,4 +19,15 @@ node{
   }
   
   
+  stage('Slack Notification'){
+    slackSend baseUrl: 'https://hooks.slack.com/services/',
+    channel: '#jenkins-pipeline',
+    color: 'good',
+    message: 'welcome to slack from jenkins', *
+    tokenCredentialId: 'slack-jenkins',
+    username: 'jenkins-robot'
+  
+  }
+  
+  
 }
