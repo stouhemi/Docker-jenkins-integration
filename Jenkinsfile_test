@@ -10,4 +10,13 @@ node{
   }
   
   
+  stage('Email Notification'){
+  
+    mail bcc: '', body: '''Hi,
+    this is a jenkins alert
+    Thank you''', cc: '', from: '', replyTo: '', subject: 'Job Jenkins', to: 'seiftouhemi@gmail.com'
+  
+  }
+  
+  
 }
